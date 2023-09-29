@@ -250,6 +250,7 @@ if (condition) {
 }
 ```
 ![If Else Working](https://cdn.programiz.com/sites/tutorial2program/files/how-if-else-works-c-programming.jpg)
+<br>
 *Working of if-else Loop*
 
 ### Problem: Leap Year Checker
@@ -438,4 +439,5 @@ int main() {
 ```
 ---
 ***Congratulations on completing this comprehensive C programming guide! Remember, practice is key to mastering programming. Explore more, solve problems, and enjoy the journey of coding! Happy coding! 😄***
+<br>
 ![meme](https://cdn.memes.com/up/1987091626510839/i/1662929084936.png)
