@@ -438,7 +438,6 @@ int main() {
 }
 ```
 ---
-***Congratulations on completing this comprehensive C programming guide! Remember, practice is key to mastering programming. Explore more, solve problems, and enjoy the journey of coding! Happy coding! 😄***
-<br>
-<br>
+***Congratulations on completing this comprehensive C programming guide! Remember, practice is key to mastering programming. Explore more, solve problems, and enjoy the journey of coding! Happy coding! 😄***  
+
 ![meme](https://cdn.memes.com/up/1987091626510839/i/1662929084936.png)
