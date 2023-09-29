@@ -86,6 +86,7 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 ![For Loop Working](https://cdn.programiz.com/sites/tutorial2program/files/c-for-loop.jpg)
+<br>
 *Working of For Loop*
 
 ### Problem: Factorial Calculation
@@ -119,6 +120,7 @@ while (testExpression) {
 }
 ```
 ![While Loop Working](https://cdn.programiz.com/sites/tutorial2program/files/c-while-loop_0.jpg)
+<br>
 *Working of While Loop*
 
 ### Problem: Print N numbers
@@ -154,6 +156,7 @@ while (testExpression);
 ```
 
 ![Do While Loop Working](https://cdn.programiz.com/sites/tutorial2program/files/c-do-while-loop_0.jpg)
+<br>
 *Working of do - while Loop*
 
 ### Problem: Add numbers entered by user
@@ -195,6 +198,7 @@ switch (expression)
 ```
 
 ![Switch case Working](https://cdn.programiz.com/sites/tutorial2program/files/flowchart-switch-statement.jpg)
+<br>
 *Working of switch...case Loop*
 
 ### Problem: Simple Calculator
