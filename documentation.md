@@ -114,7 +114,7 @@ int main() {
 
 The syntax of the `while` loop is:
 
-```
+```ruby
 while (testExpression) {
   // the body of the loop 
 }
@@ -148,7 +148,7 @@ void main() {
 
 The syntax of the `do-while` loop is:
 
-```
+```ruby
 do {
   // the body of the loop
 }
