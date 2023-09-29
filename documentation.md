@@ -1,4 +1,4 @@
-# Comprehensive C Programming Guide for Beginners
+# C Programming Guide for Beginners
 
 ## Introduction
 
