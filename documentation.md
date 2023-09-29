@@ -80,7 +80,7 @@ void main() {
 In programming, a loop is used to repeat a block of code until the specified condition is met.
 
 ### For Loop
-```
+```c
 for (int i = 0; i < 5; i++) {
     // Code inside the loop
 }
