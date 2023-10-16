@@ -197,7 +197,7 @@ switch (expression)
 }
 ```
 
-![Switch case Working](https://www.alphacodingskills.com/swift/img/swift-switch.png)
+![Switch case Working](https://drive.google.com/file/d/1WUEmH2G9Jq4PSfzHj609Xs8_ET5YkYD6/view?usp=drive_link)
 <br>
 *Working of switch...case Loop*
 
