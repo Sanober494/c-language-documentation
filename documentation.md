@@ -197,7 +197,7 @@ switch (expression)
 }
 ```
 
-![Switch case Working](https://cdn.programiz.com/sites/tutorial2program/files/flowchart-switch-statement.jpg)
+![Switch case Working](https://gcdnb.pbrd.co/images/KstUIG6eZL7Q.png?o=1)
 <br>
 *Working of switch...case Loop*
 
