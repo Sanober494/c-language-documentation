@@ -197,7 +197,7 @@ switch (expression)
 }
 ```
 
-![Switch case Working](https://cdn.programiz.com/sites/tutorial2program/files/flowchart-switch-statement.jpg)
+![Switch case Working](https://www.alphacodingskills.com/swift/img/swift-switch.png)
 <br>
 *Working of switch...case Loop*
 
