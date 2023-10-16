@@ -197,7 +197,7 @@ switch (expression)
 }
 ```
 
-![Switch case Working](https://drive.google.com/file/d/1WUEmH2G9Jq4PSfzHj609Xs8_ET5YkYD6/view?usp=drive_link)
+![Switch case Working](https://pasteboard.co/KstUIG6eZL7Q.png)
 <br>
 *Working of switch...case Loop*
 
