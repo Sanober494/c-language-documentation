@@ -249,23 +249,23 @@ Consider the value of the number = 181
 The while loop will run for 3 times, given as:
 
 **1. First iteration, number = 181**
-
+```
 remainder = 181 % 10 = 1  
 number_reverse = ( 0 * 10 ) + 1 = 1  
 number = 181 / 10 = 18
-
+```
 **2. Second iteration, number = 18**
-
+```
 remainder = 18 % 10 = 8  
 number_reverse = ( 1 * 10 ) + 8 = 18  
 number = 18 / 10 = 1
-
+```
 **3. Third iteration, number = 1**
-
+```
 remainder = 1 % 10 = 1  
 number_reverse = ( 18 * 10 ) + 1 = 181  
 number = 1 / 10 = 0
-
+```
 The loop will no longer run as the base condition no longer continues to be satisfied as the number reached its minimum value = 0.
 
 ***Congratulations on completing this C programming foundations! Remember, practice is key to mastering programming. Explore more, solve problems, and enjoy the journey of coding! Happy coding! 😄***  
