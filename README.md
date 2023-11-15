@@ -1,4 +1,4 @@
-# Simple C Programming Documentation
+# C Programming Documentation
 
 Welcome to the Simple C Programming Documentation repository! This repository contains straightforward documentation to help you understand basic concepts of the C programming language.
 
