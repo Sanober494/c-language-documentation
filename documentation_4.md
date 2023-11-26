@@ -14,15 +14,13 @@ In this session, we'll embark on a debugging adventure. We'll explore the concep
    - [Pointers and Functions](#pointers-and-functions)
    - [Common Pitfalls and Challenges](#common-pitfalls-and-challenges)
    - [Questions from the Internet](#questions-from-the-internet)
-2. [Conclusion](#conclusion)
+2. [Deadly Debugging](#deadly-debugging)
+3. [Conclusion](#conclusion)
 
 ## What on Earth is a Pointer?
 
 In C, a pointer is like a GPS for your program. It holds the memory address of a variable, allowing you to navigate through the vast landscape of memory. But beware, one wrong turn and you might end up in the dreaded Segmentation Fault Swamp!
 
-**Meme:**
-
-*Picture a librarian holding a pointer card with a bewildered expression, saying, "Where did I put that book again?"*
 
 **Example:**
 ```c
@@ -53,9 +51,7 @@ Dereferencing a pointer means accessing the value it points to. It's like using 
 ```c
 int value = *pNum; // value now holds the content of the memory location pointed by pNum
 ```
-**Meme:**
 
-*Picture a person standing in front of a locked door, holding a key. As they insert the key and turn it, the door opens, revealing a treasure chest.*
 
 **Question 2:** What would happen if you dereference a pointer that hasn't been initialized?
 
@@ -73,9 +69,7 @@ int *pArr = arr;
 // Accessing elements using pointer arithmetic
 int thirdElement = *(pArr + 2); // This gets the third element (index 2) of the array
 ```
-**Meme:**
 
-*Picture a hiker traversing a mountain trail, following the markers to reach the summit.*
 
 **Question 3:** Explain the difference between `*(pArr + 2)` and `pArr[2]`.
 
@@ -95,9 +89,7 @@ int firstElement = numbers[0];
 int alsoFirstElement = *pNumbers;
 ```
 
-**Meme:**
 
-*Picture a neatly arranged bookshelf with books neatly placed on shelves (arrays) vs. a scattered pile of books on the floor (pointers), representing the organized nature of arrays vs. the flexibility of pointers.*
 
 **Question 4:** Can you explain why `sizeof(numbers)` is different from `sizeof(pNumbers)`?
 
@@ -120,9 +112,6 @@ int main() {
 }
 ```
 
-**Question 5:** What happens if you pass a NULL pointer to the `doubleValue` function?
-
-*Hint: NULL is the Bermuda Triangle of pointers!*
 
 
 ## Common Pitfalls and Challenges
@@ -135,17 +124,140 @@ int main() {
 
 4. **Array Boundaries:** Be mindful of going beyond the boundaries of arrays. Memory is a delicate ecosystem!
 
-## Questions
+## Question
 
-1. **Why do C programmers prefer pointers?**
-   - *Meme: Confession Bear saying, "I like pointers because I enjoy living dangerously."*
+```c
 
-2. **What's the purpose of `void*` in C?**
-   - *Meme: Cat saying, "I haz pointer, and it can haz any type."*
+#include <stdio.h>
+int main()
+{
+   int* pc, c;
+   
+   c = 22;
+   printf("Address of c: %p\n", &c);
+   printf("Value of c: %d\n\n", c);  // 22
+   
+   pc = &c;
+   printf("Address of pointer pc: %p\n", pc);
+   printf("Content of pointer pc: %d\n\n", *pc); // 22
+   
+   c = 11;
+   printf("Address of pointer pc: %p\n", pc);
+   printf("Content of pointer pc: %d\n\n", *pc); // 11
+   
+   *pc = 2;
+   printf("Address of c: %p\n", &c);
+   printf("Value of c: %d\n\n", c); // 2
+   return 0;
+}
+```
 
-3. **How many C programmers does it take to change a light bulb?**
-   - *Meme: A group of programmers arguing whether to use a pointer to change the bulb.*
+## Output
+
+```c
+Address of c: 2686784
+Value of c: 22
+
+Address of pointer pc: 2686784
+Content of pointer pc: 22
+
+Address of pointer pc: 2686784
+Content of pointer pc: 11
+
+Address of c: 2686784
+Value of c: 2
+```
+
+
+# Deadly Debugging 
+Debugging, the art of hunting down and eliminating bugs in your code, is an essential skill for any programmer. It's like being a detective, meticulously examining the clues left behind by your code to uncover the culprit behind its misbehavior. In the world of C programming, debugging can be a daunting task, but with the right approach, it can be a rewarding experience.
+
+Your primary weapon in this debugging crusade is your compiler. The compiler scrutinizes your code, flagging any syntactical errors or inconsistencies that might be causing problems (Just like your mom over your shoulder in 2nd grade :) )
+
+As you delve into the debugging process, there are a few key strategies to keep in mind:
+
+1. **Reproduce the Bug:** Before you can fix it, you need to be able to consistently reproduce the bug. This might involve running your program multiple times with different inputs or setting up specific conditions to trigger the error. This can help you find out if there is a particular test case showing the error or all of them not working at all :(.
+
+2. **Identify Symptoms:** Carefully observe the symptoms of the bug. Is your program crashing unexpectedly? Is it producing incorrect output? Analyzing the symptoms can provide valuable clues about the underlying cause.
+
+3. **Simplify the Problem:** Break down the problem into smaller, more manageable pieces. This can involve isolating specific sections of code, removing extraneous elements, or temporarily disabling certain features to pinpoint the source of the bug.
+
+4. **Use Debugging Tools:** Employ your compiler and debugger to their fullest potential. Set breakpoints, print statements, inspect variables, and step through your code to identify where the program's behavior deviates from expectations.
+
+5. **Seek Help:** Don't hesitate to seek help from fellow programmers, online forums, or documentation. A fresh perspective can often lead to the breakthrough you need. (Sleeping and praying to god helps too (Tried and Tested, trust us :) ) ).
+
+Here is an example of a simple C program with a bug and a step-by-step process of debugging it:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+    for (int i = 0; i <= 10; i++) {
+        sum *= i;
+    }
+
+    printf("The sum is: %d\n", sum);
+
+    return 0;
+}
+```
+
+This program is supposed to calculate the sum of the numbers from 0 to 10. However, there is a bug in the program that is causing it to print an incorrect value.
+
+**Step 1: Compile the program**
+
+The first step is to compile and run the program to view the output. In an average programmer's life, *logical errors* are their worst enemy. These errors disguise themselves within the program because they don't throw up a *syntax error*.
+
+The above print the following output:
+
+```
+The sum is: 0
+```
+
+The program is clearly not printing the correct sum, which should be 55.
+
+**Step 3: Use a print statements**
+
+Print statements are underestimated friends of ours. Carefully placing a print statement can show us the flow of the program and help us understand where we are going wrong
+
+The program becomes something as follows
+
+```c
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+    for (int i = 0; i <= 10; i++) {
+	printf("The running sum is: %d\n", sum);
+        sum *= i;
+    }
+
+    printf("The sum is: %d\n", sum);
+
+    return 0;
+}
+```
+
+You will find that, the value of the `sum` variable is 0 at all points in the program.
+
+**Step 8: Find the bug**
+
+By stepping through the program, you will eventually find the bug. In this case, the bug is that the condition of the the sum increment is incorrect. The condition should be `sum+=i`, not `sum*=i`.
+
+**Step 9: Fix the bug**
+
+Edit the program to fix the bug. Save the changes and then recompile the program.
+
+**Step 10: Run the program again**
+
+Run the program again to make sure that the bug has been fixed. The program should now print the correct sum, which is 55.
+
+This is just a simple example of debugging a C program. The debugging process can be more complex for larger and more complex programs. However, the steps involved are essentially the same: identify the problem, reproduce the problem, isolate the problem, and fix the problem.
+
+We can also use various debuggers such as gdb (a popular one) that help us find out the error.
 
 ## Conclusion
+In conclusion, mastering debugging and understanding pointers in C is essential for writing robust and efficient code. Debugging is not just about fixing errors; it's a proactive process that enhances code quality. Pointers, while powerful, require careful handling to prevent runtime errors. This documentation has provided insights into debugging techniques and practical exercises with intentional bugs. Embrace debugging as a crucial part of development, and use pointers judiciously to write reliable C code. Happy coding!
 
-Congratulations, brave adventurer! You've successfully navigated the maze of pointers in C. Remember, with great power comes great responsibility (and perhaps a few headaches). May your code be bug-free, and may your pointers always point to the right treasure! Happy coding! 🚀
+![enter image description here](https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33be7eedf8e1f31aabcec_BwENfmI0CU5dZGYlSyo142mpfG08-rYgTS-Qm47uMUXN6JXtmdZvtzVzTooUQdXTWmTD8uzF9N6XQJA2vUIMi53tunFyVtvOBJTNfOjHit2P_JkTmFzFsK7ep6Vb9781XZnRAryH.png)
