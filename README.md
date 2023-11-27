@@ -10,6 +10,8 @@ Welcome to the Simple C Programming Documentation repository! This repository co
 4. [Arrays](#arrays)
 5. [Functions](#functions)
 6. [Logical Thinking](#logical-thinking)
+7. [Pointers](#pointers)
+8. [Debugging](#debugging)
 
 
 Each section provides an introduction, examples, and problems to reinforce your understanding. This documentation is designed for beginners who are taking their first steps into the world of C programming.
